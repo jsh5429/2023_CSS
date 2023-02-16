@@ -1,0 +1,28 @@
+.font-type {
+    font-family: "CookieRun Black";
+}
+
+.div-style {
+    border: solid 1px brown;
+    width: 300px;
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+.b-style{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+    font-family: "궁서";
+    color: green;
+}
+
+.ul-style{
+    list-style-type:circle;
+}
+
+.li-style a:hover{
+    text-shadow: 1px 1px 2px blueviolet;
+    font-style: italic;
+}
+
