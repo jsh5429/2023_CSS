@@ -1,0 +1,49 @@
+.background-orange{
+    background-color: orange;
+}
+.inline-block{
+    display: inline;
+    width: 300px;
+    height: 300px;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.none{
+    display: none;
+}
+
+.opacity{
+    opacity: 25%;
+    background-color: yellow;
+}
+
+.box{
+
+    width: 200px;
+    height: 200px;
+    background-color: burlywood;
+}
+
+.position-r{
+    /*상대위치를 쓰겠다 알림*/
+    position: relative;
+    left: 30px;
+    top:30px;
+}
+.position-s{
+    position: static;
+    /*정적 위치에서는 이동할 수 없다.*/
+    left: 30px;
+}
+.position-f{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+.position-a{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
