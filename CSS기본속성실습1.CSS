@@ -1,12 +1,13 @@
+/*나는 "CookieRun Black" 했었음*/
 .font-type {
-    font-family: "CookieRun Black";
+    font-family: fantasy;
 }
 
 .div-style {
     border: solid 1px brown;
     width: 300px;
     height: 100px;
-    background-color: antiquewhite;
+    background-color: beige;
 }
 
 .b-style{
@@ -22,7 +23,11 @@
 }
 
 .li-style a:hover{
-    text-shadow: 1px 1px 2px blueviolet;
+    text-shadow: 1px 1px 1px grey;
     font-style: italic;
 }
 
+.li-style a{
+    text-decoration: none;
+    color: black;
+}
