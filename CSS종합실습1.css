@@ -1,0 +1,25 @@
+.my-bt-style{
+    border-radius: 15px;
+    padding: 15px 10px;
+    width: 150px;
+    border: none;
+    background-color: orange;
+}
+.my-bt-style a{
+    text-decoration: none;
+    color: black;
+}
+.my-bt-style:hover{
+    background-color: orangered;
+}
+.my-topic-style{
+    text-decoration: none;
+    margin-top: 15px;
+    padding: 5px;
+    color: black;
+}
+.my-topic-style:hover{
+    color: rgb(41, 177, 0);
+    border-bottom: solid 3px rgb(41, 177, 0);
+}
+
