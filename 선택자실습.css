@@ -1,0 +1,22 @@
+.div-style3{
+    border: solid red 2px;
+}
+
+.ul-style-sl li, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+}
+.div-style4{
+    margin: 10px;
+    float: right;
+}
+
+.div-style4 button{
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px 15px;
+    background-color: blue;
+    color: white;
+}

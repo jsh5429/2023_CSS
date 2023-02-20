@@ -1,0 +1,92 @@
+.outbox p{
+    background-color: yellow;
+}
+
+.outbox > p{
+    background-color: blue;
+}
+
+.sibling~p{
+    background-color: cadetblue;
+}
+/*+를 사용할 때는 바로 뒤에 있는 태그만 찾을 수 있다*/
+.sibling+a{
+    /*바로 뒤에 있지 않기 때문에 적용되지않음*/
+    background-color: aqua;
+}
+.sibling+p{
+    background-color: aqua;
+}
+/*보통은 클래스를 연결해서 찾기보단 태그를 연결해서 찾는다.*/
+.sibling~.test {
+    background-color: brown;
+}
+
+.input-focus:focus{
+    background-color: coral;
+}
+
+.input-focus:focus+p{
+    color: blue;
+}
+
+.state>input:checked+span{
+    color: gray;
+}
+
+.state>input:disabled+span{
+    text-decoration: line-through 1px solid;
+}
+
+/*>를 이용해 자식을 표시해줘야한다.*/
+.menu-list>li:first-child{
+    background-color: cornflowerblue;
+}
+
+.menu-list>li:last-child{
+    background-color: aquamarine;
+}
+
+.menu-list>li:nth-child(2n){
+    color: brown;
+}
+
+.table-color{
+    border-collapse: separate;
+}
+/*table은 tbody를 거쳐야한다. 자식을 사용하는 방법*/
+.table-color>tbody>tr:nth-child(2n){
+    background-color: yellow;
+}
+
+/*자손을 사용. 자손이므로 tbody를 무시한다*/
+.table-color tr:first-child{
+    background-color: blue;
+}
+
+.table-color>tbody>tr:last-child{
+    background-color: aqua;
+}
+
+.child-tag>p:first-child{
+    color: blue;
+}
+
+.child-tag>h1{
+    color: brown;
+}
+/*부모 중에서 가장 처음 자식인 p태그만 적용*/
+p:first-of-type{
+    color: red;
+}
+
+.of-type p:first-of-type{
+    color: red;
+}
+
+/*클래스를 지정하고 자식으로 타입찾기
+first-child와 동일한 역할*/
+
+.of-type>p:first-of-type{
+    color: blue;
+}
