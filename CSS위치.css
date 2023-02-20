@@ -37,10 +37,12 @@
     /*정적 위치에서는 이동할 수 없다.*/
     left: 30px;
 }
+/*특정 태그를 계속 제일 앞에 두고 싶으면 z-indes를 사용*/
 .position-f{
     position: fixed;
-    top: 0;
+    top: 50px;
     right: 0;
+    z-index: 100;
 }
 .position-a{
     position: absolute;
