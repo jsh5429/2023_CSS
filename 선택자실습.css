@@ -2,21 +2,51 @@
     border: solid red 2px;
 }
 
-.ul-style-sl li, a{
-    list-style-type: none;
+ul {
+    list-style: none;
+}
+
+.ul-style-sl a{
     text-decoration: none;
     color: black;
 }
-.div-style4{
-    margin: 10px;
-    float: right;
-}
 
-.div-style4 button{
+/* li 태그가 block 속성일 때 float 속성으로 정렬*/
+.div-style4 li{
+    float: right;
     border: none;
     border-radius: 10px;
-    margin: 10px;
+    margin: 0px 10px;
     padding: 5px 15px;
     background-color: blue;
     color: white;
+}
+.hashtag-inline{
+    clear: both;
+}
+
+.hashtag-inline>span{
+    position: relative;
+    left: 70%;
+    border-radius: 10px;
+    margin: 0 10px;
+    padding: 5px 15px;
+    background-color: blue;
+    color: white;
+    display: inline-block;
+}
+
+/* ::after와 ::before은 기본적으로 inline인듯
+inline-block 속성을 넣어 width/height로 크기를 조절해서
+text-align을 넣는게 편한가
+아예 넣지않고 padding 값 만으로 움직이는 게 편한가...
+쪼그만 아이콘이면 padding이 편할수는 있을듯. 큰 이미지이면
+width/height 값으로 자유자재로 바꿀 수 있으니까!*/
+.notice>p::after{
+    margin-left: 5px;
+    content: "N";
+    color: white;
+    background-color: orange;
+    padding: 0 4px;
+    border-radius: 50%;
 }

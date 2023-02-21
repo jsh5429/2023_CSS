@@ -90,3 +90,84 @@ first-child와 동일한 역할*/
 .of-type>p:first-of-type{
     color: blue;
 }
+
+.first-letter::first-letter{
+    color: red;
+    font-size: 1.5rem;
+}
+
+.first-line::first-line{
+    color: blue;
+}
+
+.before::before{
+    /*content를 넣어서 내용 추가*/
+    /*글자, url을 통해 이미지 추가*/
+    content: url(./img/pencil-solid.svg);
+    /*inline-block을 넣어서 크기조절*/
+    display: inline-block;
+    width: 20px;
+}
+
+
+.before-color::before{
+    content: "";
+    background-color: yellow;
+    display: inline-block;
+    /*content에 글자가 없을 때, inline-block사용해 공간을 임의로 만들어준다*/
+    /*width/height 둘다 지정해줘야 나타난다*/
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.after::after{
+    content: "추가";
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.after-color:hover:after{
+    content: "추가된 글자";
+    display: inline-block;
+    color: white;
+    width: 100%;
+    height: 30px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    /*position : absolute는 공간을 차지하지 않는다.
+    따라서 left나 right의 값에 따라 기준인 클래스 대상인 태그를
+    덮어버릴 수도 있다*/
+}
+
+.before-image::before{
+    content: "";
+    /*content로 이미지 크기 수정 어려움(고정)*/
+    /*크기 수정이 가능한 background-image*/
+    /*따라서 background로 지정한다*/
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+}
+
+.attr>input[type="checkbox"]:checked+span{
+    color: brown;
+}
+
+.attr>input[type="radio"]+span{
+    text-decoration: underline wavy;
+}
+
+.attr>input[type="button"] {
+    background-color: black;
+    color: white;
+}
+
+.attr>input[type="radio"][value="group"]{
+    /*두 개 이상의 속성이름과 속성값을 가진 태그를
+    찾을 수 있다*/
+}
