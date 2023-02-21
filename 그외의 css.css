@@ -1,0 +1,119 @@
+@import url(./선택자.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+input[type="button"]{
+    background-image: url(./img/images\ \(1\).png);
+    /*크기에 맞춰서 배경 이미지를 줄이거나 늘려준다*/
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border: solid black 1px;
+    border-radius: 50%;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.font {
+    font-family: 'Dongle', sans-serif;
+    font-weight: bold;
+}
+
+.gradient{
+    height: 50px;
+    background: 
+    -webkit-linear-gradient(right, green, yellow, black, red);
+}
+
+.gradient2{
+    height: 50px;
+    background: 
+    -webkit-linear-gradient(90deg, rgba(0,225,0,0.5), yellow, black, red);
+}
+
+body{
+    background: -webkit-linear-gradient(270deg, #0000009a, #fff);
+}
+
+.gradient-circle{
+    width: 150px;
+    height: 150px;
+    background: 
+    -webkit-radial-gradient(closest-side, red, orange,
+    yellow,green,blue, indigo, purple);
+}
+
+.gradient-circle2{
+    width: 150px;
+    height: 150px;
+    background: 
+    -webkit-radial-gradient(red 30%, white 50%);
+}
+
+.box-shadow{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+    box-shadow: -3px 3px 2px #fff;
+}
+
+.background{
+    background-image: url(./img/images\ \(1\).png);
+    height: 300px;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.background2{
+    width: 600px;
+    height: 300px;
+    border: #fff 10px solid;
+    padding: 30px;
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+.background3{
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    font-size: 2rem;
+    font-weight: bold;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.border-image{
+    border-image: url(./img/border.png);
+}
+
+.text{
+    background-color: yellow;
+    height: 70px;
+    word-break: keep-all;
+    /*각 콘텐츠의 값이 넘쳤을 때 어떻게 보일지 정한다.*/
+    overflow: hidden;
+    /*nowrap : 글이 길면 말줄임표를 붙여버린다.*/
+    /*pre-wrap : 줄을 바꿔서 표현한다*/
+    white-space: normal;
+    /*글자가 그 크기를 넘어갔을 때 모습 정함*/
+    text-overflow: ellipsis;
+}
+
+.text-kr{
+    background-color: yellow;
+    width: 200px;
+    height: 20px;
+    /*넘치는 부분을 가려준다. (잘라버린다)*/
+    overflow: hidden;
+    /*말줄임표*/
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

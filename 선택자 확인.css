@@ -1,0 +1,50 @@
+.header{
+    background-color: rgb(173, 255, 228);
+    text-align: center;
+    padding: 50px 0;
+}
+/* nav */
+.nav{
+    /* overflow가 없으면 nav의 배경색이 사라진다. 아예 nav가 묻히는듯*/
+    overflow: auto;
+    background-color: aquamarine;
+    margin: 0;
+    padding: 10px;
+}
+
+.nav>ul{
+    margin: 0;
+    list-style-type: none;
+    clear: both;
+
+}
+
+.nav>ul>li{
+    float: left;
+    border-right: solid black 1px;
+    padding: 0 10px;
+}
+
+.nav>ul>li:last-child{
+    border-right: none;
+}
+
+.main{
+    background-color: rgb(77, 153, 128);
+    width: 800px;
+    /*자동으로 중앙으로 이동함*/
+    margin: auto;
+    /*h1, h2등 자체 margin 값이 있기 때문에 main 안으로 넣기위해선
+    main에 padding값을 넣어 안의 콘텐츠들을 밀어넣어야 h1의 margin이
+    다 들어온다*/
+    padding : 5px;
+    /*최소값을 지정해주면 컨텐츠의 내용이 없을때 크기가 되고
+    height : auto가 기본값. 따라서 컨텐츠의 내용이 많으면
+    자동으로 늘어난다.*/
+    min-height : 500px;
+}
+
+.footer{
+    background-color: rgb(62, 128, 106);
+    height: 50px;
+}
