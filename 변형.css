@@ -1,0 +1,345 @@
+.my-box{
+    width: 150px;
+    height: 150px;
+    background-color: orange;
+}
+
+.trans{
+    transform: translate(10px, 10px);
+}
+
+.rotate{
+    transform: rotate(30deg);
+}
+
+.transform {
+    transform: translate(100px, 0) scale(0.8) skew(20deg);
+}
+
+.transform-3d {
+    transform: rotateX(60deg) rotateY(30deg)
+    translate3d(0,0,-20px);
+}
+
+/* 전환이 될 방법을 알려줘야한다(hover 등)*/
+.transition:hover{
+    background-color: red;
+    transition: background-color 1s;
+}
+
+/*마우스가 떨어졌을때 다시 원래대로 돌아가는데 걸리는 시간*/
+.transition{
+    transition: background-color 0.5s;   
+}
+
+.transform-transition:hover{
+    transform: translate(100px, 0) rotate(90deg);
+    width: 200px;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.transform-transition{
+    transition: all 1s;
+}
+
+.linear-transition:hover{
+    transform: rotate(90deg);
+    transition-timing-function: linear;
+    transition: all 2s;
+}
+
+.trans-blue>input[type="checkbox"]:checked+span{
+    color: blue;
+    transition: color 1s;
+}
+
+
+.after-transition>p::after{
+    content: "새로운 내용이 나타납니다";
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 0;
+    
+}
+.after-transition>p:hover:after{
+    content: "새로운 내용이 나타납니다";
+    background-color: black;
+    color: white;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+/*.after-transition:hover{
+    background-color: black;
+    transition: all 1s;
+}*/
+
+/*.after-transition>p:hover::after{
+    float: left;
+    content: "본래 문구를 대체하는 텍스트";
+    display: block;
+    color: white;
+    transition: all 1s;
+}*/
+
+.content-container{
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+    overflow: hidden;
+}
+
+.content-container>.img{
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+}
+
+.content-container>.img:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+
+
+/*-----------------*/
+
+.content-container2{
+    float: left;
+    margin: 0 10px;
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+    overflow: hidden;
+}
+
+.content-container2>.img2{
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+}
+
+.content-container2>.img2:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*-----------*/
+
+.content-container3{
+    width: 300px;
+    height: 300px;
+    background-color: brown;
+    overflow: hidden;
+}
+
+.content-container3>.img3{
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+}
+
+.content-container3>.img3:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.content-container>.img4{
+    width: 300px;
+    height: 300px;
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.content-container>.black{
+    position: absolute;
+    /*박스 사이즈 고정*/
+    box-sizing: border-box;
+    padding-top: 130px;
+    color: white;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    background-color: black;
+    opacity: 0;
+}
+
+.content-container:hover>.black{
+    opacity: 0.5;
+    transition: all 1s;
+}
+
+.animation{
+    animation-name: moving;
+    animation-duration: 2s;
+    /*기본적으로는 한번만 실행된다.*/
+    animation-iteration-count: infinite;
+}
+
+.animation-back{
+    animation-name: movingback;
+    animation-duration: 5s;
+    /*기본적으로는 한번만 실행된다.*/
+    animation-iteration-count: infinite;
+}
+
+@keyframes moving{
+    from { transform: translate(0, 0);}
+    to { transform: translate(100px, 0);}
+}
+
+@keyframes movingback{
+    0% {transform: transform: translate(0, 0);}
+    50% { transform: translate(200px, 0);}
+    100% {transform: transform: translate(0, 0);}
+}
+
+.animation-box{
+    animation: movingbox 5s infinite;
+}
+
+@keyframes movingbox{
+    0% { }
+    20%{transform: rotate(90deg);
+        border-top-left-radius : 0%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        background-color: orangered;
+
+    }
+    40%{
+        transform: rotate(180deg);
+        border-top-left-radius : 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        background-color: orangered;
+
+    }
+    60%{
+        transform: rotate(270deg);
+        border-top-left-radius : 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 0%;
+        background-color: orangered;
+    }
+    80%{
+        transform: rotate(360deg);
+        border-top-left-radius : 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: orangered;
+    }
+    100%{
+        border-top-left-radius : 0%;
+        border-bottom-left-radius: 0%;
+        border-bottom-right-radius: 0%;
+        border-top-right-radius: 0%;
+        background-color: orangered;
+    }
+}
+
+.text{
+    /*border-box가 계산하기가 더 쉽다*/
+    width: 150px;
+    height: 150px;
+    padding-top: 50px;
+    position: absolute;
+    text-align: center;
+    z-index: 1;
+}
+
+.filter{
+    width: 300px;
+}
+
+.filter:hover{
+    filter: blur(5px) brightness(1.2);
+    transition: all 1s;
+}
+
+.image-list>.content-image {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.image-list>.content-image:nth-child(1){
+    background-image: url(./img/dove-gc04843ca2_1920.jpg);
+}
+.image-list>.content-image:nth-child(1):hover{
+    filter: invert();
+}
+.image-list>.content-image:nth-child(2){
+    background-image: url(./img/cat-couple.jpg);
+}
+
+.image-list>.content-image:nth-child(2):hover{
+    filter: contrast(50%);
+}
+.image-list>.content-image:nth-child(3){
+    background-image: url(./img/kitty.jpg);
+}
+
+.image-list>.content-image:nth-child(3):hover{
+    filter: sepia(20%);
+}
+
+.pencil>.content-image2{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    animation: movingimage 1s infinite;
+    background-image: url(./img/pencil-solid.svg);
+}
+
+@keyframes movingimage{
+    0% {transform: translate(0,0);}
+    30% {transform: translate(10px,0);}
+    70% {transform: translate(10px,0);}
+    90% {transform: translate(0,0);}
+    100% {transform: translate(0,0);}    
+}
+
+@keyframes rotatepencil{
+    0% {transform: rotate(0);}
+    25% {transform: rotate(-30deg);}
+    50% {transform: rotate(30deg);}
+    75% {transform: rotate(0);}
+    100% {transform: rotate(0);}
+}
+
+.mix-blend{
+    position: fixed;
+    top: 0;
+    color: white;
+    mix-blend-mode: difference;
+}
+/*body가 white라 mix-blend 속성인 p태그의 white는 black으로 나온다*/
+body{
+    background-color: white;
+}
+

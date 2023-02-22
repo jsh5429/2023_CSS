@@ -1,0 +1,39 @@
+.flex-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-box-height{
+    display: flex;
+    height: 150px;
+    background-color: burlywood;
+    /*간격*/
+    justify-content: space-between;
+    /*가운데 높이로 옮기기*/
+    align-items: center;
+}
+
+/*p태그 크기 확인. 기본적으로 박스 속성이지만 flex-container에 들어가면
+크기가 변한다.*/
+.flex-box-height>p{
+    padding: 5px;
+    background-color: white;
+}
+
+.flex-box-wrap{
+    display: flex;
+    /*공간이 부족해 다음 줄로 넘어가게 하고 싶을 때*/
+    flex-wrap: wrap;
+    /*아래로 내려가는 아이템도 공간이 띄워져 중간 정렬*/
+    justify-content: space-evenly;
+}
+
+.flex-box-height-wrap{
+    display: flex;
+    height: 150px;
+    background-color: burlywood;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}

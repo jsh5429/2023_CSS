@@ -1,0 +1,14 @@
+.col{
+    background-color: blanchedalmond;
+    column-count: 3;
+    column-rule: solid burlywood 2px;
+    column-gap: 30px;
+    padding: 10px;
+    column-fill: balance;
+    column-span: ;
+}
+
+.span-all {
+    column-span: all;
+    background-color: aquamarine;
+}
