@@ -1,0 +1,12 @@
+/*pc기준으로 사용*/
+
+body{
+    background-color: darkorange;
+}
+
+/*max-width가 480px : 480px보다 작을 때 적용*/
+@media screen and(max-width:480px) {
+    body{
+        background-color: lightblue;
+    }
+}
