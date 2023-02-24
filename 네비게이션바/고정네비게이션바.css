@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: aquamarine;
+    padding: 10px;
+    /*position:fixed를 넣으면 inline이 된다.*/
+    /*fixed가 되면 원래 헤더가 있는 공간이 없어지고
+    z-index가 높은 위로 옮겨져 고정되기 때문에
+    바로 아래에 있는 다른 태그가 겹쳐져 가려질 수 있다.
+    연이어서 가려진 태그에 콘텐츠를 넣고 싶다면
+    padding-top을 활용.*/
+    position: fixed;
+    width: 100%;
+}
+
+.header>.nav>ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+.main{}
+/* 고정 내비게이션 바를 사용할 때는 컨텐츠가 보여질
+공간을 확보한다. padding말고 
+margin으로 공간을 확보해도 좋다.*/
+.main>.content1{
+    /*브라우저 높이비율에 따라서 보이고싶을 때 사용하는 단위*/
+    height: 100vh;
+    padding-top: 150px;
+    background-color: aqua;
+}
+.main>.content2{
+    height: 100vh;
+    background-color: rgb(0, 128, 128);
+}

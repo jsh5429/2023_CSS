@@ -69,3 +69,10 @@ body{
     background-color: rgb(216, 119, 216);
     line-height: 200px;
 }
+
+/*float 두번째 사용방법*/
+/* 두개의 내용에 각각 float를 사용해서 크기가 고정된다.
+이 너비가 고정되어있을 때는 두개 다 float을 써서 작성해도되고
+ */
+
+/* float와 margin 사용*/

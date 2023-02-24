@@ -1,0 +1,47 @@
+/* float을 이용한 레이아웃 */
+body{margin: 0; padding: 0;}
+
+.wrap{
+    width: 1000px; margin: auto;
+    background-color: brown;
+    font-size: 2rem;
+}
+
+.header{
+    height: 150px;
+    background-color: rgb(165, 73, 73);
+}
+
+.nav{
+    height: 100px;
+    background-color: rgb(167, 69, 69);
+}
+
+.aside{
+    float: left;
+    height: 500px;
+    width: 300px;
+    background-color:  rgb(173, 101, 101);
+}
+
+.main{
+    overflow: auto;
+}
+
+
+.m-l{
+    margin-left: 300px;
+}
+
+.main>.content1{
+    background-color: burlywood;
+    height: 250px;
+}
+.main>.content2{
+    background-color: rgb(163, 135, 99);
+    height: 250px;
+}
+
+.footer{
+    height: 80px;
+}
