@@ -1,0 +1,51 @@
+body, ul{margin: 0; padding: 0;}
+ul {list-style: none;}
+a{text-decoration: none; color: black;}
+
+.nav>.gnb{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: cadetblue;
+}
+
+.nav>.gnb>li:hover>.gnb-sub{
+    /*display: block; (아래 클래스에 display:none을 썼을경우)
+    아예 없었다가 나타나는 것이기 때문에 기본적으로는
+    애니메이션이 적용되지않는다.*/
+    /* visiblity+opacity는 애니메이션이 적용된다.*/
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s;
+}
+
+/*gnb에게 gnb-sub는 자식이 아니라 자손이다.*/
+.nav>.gnb .gnb-sub{
+    /*화면상에 안보이게 하는 법
+    display : none;
+    opacity : 0;*/
+    /*애니메이션을 주기 위해 존재를 없애지않고 숨긴다.*/
+    visibility: hidden;
+    opacity: 0;
+    /*공간 제약을 없애기 위해 position:absolute*/
+    position: absolute;
+    /*상위메뉴를 기준으로 중앙으로 옮긴다.*/
+    margin-left: -20px;
+    background-color: rgb(161, 199, 200);
+    padding: 10px 5px;
+}
+
+/* 하위메뉴에 마우스를 올렸을 때 전환효과*/
+
+.nav>.gnb>li>.gnb-sub>li:hover{
+    /*하위메뉴마다 마우스를 올리면 밑줄이 그어진다.
+    근데 살짝 글자위치가 바뀜.*/
+    border-bottom: 2px solid blue;
+    /*밑줄 그어지는데에 애니메이션 적용*/
+    transition: all 0.1s;
+}
+
+/*밑줄이 그어졌을때 글자 위치가 바뀌지않게 설정*/
+.nav>.gnb>li>.gnb-sub>li{
+    box-sizing: border-box;
+    height: 25px;
+}
