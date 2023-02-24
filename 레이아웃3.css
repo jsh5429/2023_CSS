@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(220, 182, 255);
+}
+
+.wrap3{
+    background: blueviolet;
+    width: 1000px;
+    font-size: 1.5rem;
+    color: white;
+    margin: auto;
+    height: 600px;
+    text-align: center;
+}
+
+/*이걸 해야 main-grid와 섞이지 않고 깔끔히 분리된다.*/
+.main-float3{overflow: auto;}
+
+.main-float3>.aside-left-two{
+    background-color: rgb(56, 19, 91);
+    float: left;
+    height: 600px;
+    width: 200px;
+    line-height: 600px;
+}
+
+.main-float3>.head3{
+    height: 200px;
+    background-color: rgb(80, 28, 128);
+    line-height: 200px;
+}
+
+.main-float3>.content3{
+    height: 200px;
+    line-height: 200px;
+    background-color: rgb(105, 38, 168);
+}
+
+.main-float3>.footer3{
+    height: 200px;
+    line-height: 200px;
+}
+
+.main-grid3{
+    display: grid;
+    grid-template-columns: 200px 800px;
+    height: 600px;
+    clear: both;
+}
+
+.main-grid3>.aside-left-two{
+    background-color: rgb(83, 45, 83);
+    grid-row: 1/4;
+    line-height: 600px;
+}
+
+.main-grid3>.head3{
+    background-color: rgb(122, 67, 122);
+    line-height: 200px;
+}
+
+.main-grid3>.content3{
+    background-color: rgb(164, 91, 164);
+    line-height: 200px;
+}
+
+.main-grid3>.footer3{
+    background-color: rgb(216, 119, 216);
+    line-height: 200px;
+}

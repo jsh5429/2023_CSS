@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+    padding: 0;
+    word-spacing: 0;
+}
+
+.wrap2{
+    width: 1000px;
+    background-color: blue;
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.head2{
+    height: 200px;
+    font-size: 4rem;
+    line-height: 200px;
+    background-color: rgb(0, 0, 89);
+    color: white;
+}
+
+.nav2{
+    line-height: 100px;
+    background-color: rgb(0, 0, 119);
+    color: white;
+}
+
+.main-float2{ 
+    overflow: auto;
+    color: white;
+    line-height: 500px;}
+
+/* 하나의 태그를 사이에 두고
+양쪽에 float를 줬을때 html의 태그 순서에 따라
+위 아래를 차지하기 때문에 양쪽에 float : left, right를
+주면 중앙에 있는 태그 content가 위를 차지해서 right의
+태그가 아래에 비뚤하게 오른쪽을 차지한다. inline-block을
+쓰거나 아니면 float속성을 준 태그들을 제일 앞에 두고
+각각 left, right를 주면 중앙에 두고 싶었던 태그를 그 다음에
+쓰면 중앙 정렬이 된다.*/
+.main-float2>.aside-left-one{
+    /*일단은 float으로 여러 태그를 정렬하고 싶으면
+    반드시 inline-block 속성과 float을 같이 활용할것*/
+    display: inline-block;
+    float: left;
+    height: 500px;
+    width: 250px;
+    background-color:  rgb(0, 0, 165);
+}
+
+.main-float2>.content2{
+    /* inline-block을 쓰지 않았을때 margin:0 250px */
+    display: inline-block;
+    margin: 0;
+    background-color:  rgb(0, 0, 189);
+    width: 500px;
+    height: 500px;
+}
+
+/*inline-block을 넣고 float을 제거하면 중구난방이 된다.
+크기를 지정했는데도 왜..그러지?
+강사님 대답으로는 inline-block으로 정렬한 것에 가깝긴한데
+float이 없으면 inline-block만으로는 정렬이 깔끔하게되지않는다.
+충분히 1000px안으로 들어가는데다가 margin도 전체 0으로
+설정했는데도 margin이 적용되서인지 뒤의 aside-right가
+margin값으로 인해서 뒤로 밀려나 아래에 정렬된다.*/
+.main-float2>.aside-right-one{
+    display: inline-block;
+    background-color:  rgb(0, 0, 213);
+    float: right;
+    width: 250px;
+    height: 500px;
+}
+
+.main-grid2{
+    display: grid;
+    clear: both;
+    color: white;
+    grid-template-columns: 250px 500px 250px;
+    height: 500px;
+    line-height: 500px;
+}
+
+.main-grid2>.aside-left-one{
+    background-color: rgb(0, 0, 238);
+}
+
+.main-grid2>.content2{
+    background-color: blue;
+}
+
+.main-grid2>.aside-right-one{
+    background-color: rgb(70, 70, 255);
+}
+
+.footer2{
+    background-color: rgb(118, 118, 255);
+    height: 80px;
+    color: white;
+    line-height: 80px;
+}

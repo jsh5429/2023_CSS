@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+} 
+
+.wrap{
+    width:1000px;
+    background-color: green;
+    /*자동으로 중앙으로 옮겨준다.*/
+    margin: auto;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* header */
+
+.header1{
+    width: 1000px; height: 200px;
+    background-color: rgb(0, 93, 0);
+    /*내부에 들어가있는 사이즈가 우선으로 적용된다.
+    따라서 전체적으로 정하고싶은 사이즈가 있다면 되도록
+    외부 태그에, 각각 정하고 싶은 사이즈가 있다면
+    되도록 내부 태그에 지정해야한다.*/
+    font-size: 4rem;
+    /*텍스트 줄 간격 조정해서 
+    글자의 위치를 조절할 수 있다. mdn 참고.*/
+    line-height: 150px;
+}
+
+/*상황에 따라서 header내부에 nav를 넣는 경우도 있다.*/
+/* nav */
+.nav1{
+    height: 100px;
+    /*태그를 넣어서 중앙정렬이 가능하다. - 패딩을 사용*/
+    /*nav의 크기가 지정되어 있을 때 계산편의를 위해
+    box-sizing:border-box를 사용한다.*/
+    box-sizing: border-box;
+    /* 안에 들어간 태그들을 flex했다면 패딩을
+    사용할 필요 없다.*/
+    padding: 20px;
+    background-color: rgb(0, 112, 0);
+}
+
+/*전체를 감싸준다.*/
+.main-float{overflow:auto}
+/* main-float */
+.main-float>.aside1{
+    float: left;
+    /*widthf를 넣어주면 글자가 오른쪽으로 나온다!
+    무슨 원리지? 이따 봐야함*/
+    width: 300px;
+    height: 500px;
+    background-color: rgb(0, 147, 0);
+}
+
+.main-float>.content1{
+    margin-left: 300px;
+    height: 500px;
+    background-color: rgb(0, 170, 0);
+}
+
+/* main-grid 의 내용 */
+
+.main-grid{
+    /*float를 사용하였다면 반드시 clear를 통해 속성을 제거.
+    영향을 받지않게 해준다. 물론 제거를 하지 않아도
+    안 받는 것처럼 보일 순 있지만 해두는 게 좋다.*/
+    clear: both;
+    /*grid*/
+    display: grid;
+    /*위에서 너비 값을 고정시켰기 때문에
+    px로 칸을 나누는게 좋다.*/
+    grid-template-columns: 300px 700px;
+    /*각각 높이를 줄 순 있지만 grid자체에 height를
+    넣을 수도 있다.*/
+    height: 500px;
+}
+
+.main-grid>.aside1{
+    background-color: rgb(0, 198, 0);
+}
+
+.main-grid>.content1{
+    background-color: rgb(0, 220, 0);
+}
+
+/* footer */
+
+.footer1{
+    height: 80px;
+}
