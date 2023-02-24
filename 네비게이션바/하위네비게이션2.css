@@ -1,0 +1,57 @@
+body, ul{padding: 0; margin: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black;}
+
+/*nav-gnb 정리*/
+
+.nav>.gnb{
+    display: flex;
+    background-color: darksalmon;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+/* li 요소가 아닌 gnb에 마우스를 올렸을 때 하단메뉴가 보이게 한다.*/
+.nav>.gnb:hover .gnb-sub{
+    visibility: visible;
+    z-index: 1;
+}
+
+/*gnb에 올리기만 하면 메뉴 전체가 나오므로 무슨 상단 메뉴트를
+눌렀는지 드러내기 위해 상단메뉴 a태그에 따로 전환을 넣어준다.*/
+.nav>.gnb>li:hover>a{
+    color: blue;
+    font-weight: bold;
+}
+
+/*nav태그와 backgroudn태그는 형제관계다.*/
+.nav:hover+.background{
+    height: 80px;
+    transition: all 0.2s;
+}
+
+/* nav- gnb의 sub메뉴 */
+/* 콘텐츠 크기만큼 크기를 차지하고 있음.*/
+/* 띄엄띄엄 못생김. 전체를 덮을 공간을 설정해줄게 필요함.*/
+.nav>.gnb .gnb-sub{
+    position: absolute;
+    /*위의 상단 메뉴에 겹치지않게 거리를 둔다.*/
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+/*하단 메뉴*/
+.nav>.gnb .gnb-sub>li{
+    /*하위 메뉴 간에 위아래 간격을 준다.*/
+    margin: 4px 0;
+}
+
+.background{
+    position: absolute;
+    display: inline-block;
+    background-color: aquamarine;
+    /*position:absolute를 넣었더니 width지정이 없이는
+    나타나지가 않는다. content는 제대로 잘 가려짐.*/
+    width: 100%;
+    height: 0;
+}
