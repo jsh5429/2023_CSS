@@ -72,6 +72,25 @@ section{
     font-size: 1.5rem;
     font-family: 'PyeongChangPeace-Bold';
 }
+.header>.nav>.nav-menu a::after{
+    content: "";
+    display: inline-block;
+    width: 0; height: 4px;
+    background-color: #FFFF08;
+    position: absolute;
+    bottom: 0px;
+    margin-left: -69px;
+}
+/* 밑줄에 애니메이션 적용*/
+.header>.nav>.nav-menu a:hover:after{
+    width: 80px;
+    transition: all 0.2s;
+}
+
+
+.header>.nav>.nav-menu a:hover{
+    color: #FFFF08;
+}
 
 /* main */
 /* 섹션부분을 찾기 힘들 것 같다면
@@ -171,32 +190,44 @@ section{
 .section3-gallery>.gallery-board>h4{
     font-weight: bold;
 }
+.section3-gallery>.gallery-board>.image-wrap{
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    margin: 15px;
+}
+.section3-gallery>.gallery-board:hover .image{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
 /* section3 이미지 넣는 공간 */
-.section3-gallery>.gallery-board:nth-child(2)>.image{
+.section3-gallery>.gallery-board:nth-child(2) .image{
     width: 250px;
     height: 250px;
-    margin: 15px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/rose-g8968e0cab_1920.jpg);
     
 }
 
-.section3-gallery>.gallery-board:nth-child(3)>.image{
+.section3-gallery>.gallery-board:nth-child(3) .image{
     width: 250px;
     height: 250px;
-    margin: 15px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/rose-g8968e0cab_1920.jpg);
     
 }
 
-.section3-gallery>.gallery-board:nth-child(4)>.image{
+.section3-gallery>.gallery-board:nth-child(4) .image{
     width: 250px;
     height: 250px;
-    margin: 15px;
     /*나중에 수정하기 위함*/
     background-image: url(../img/rose-g8968e0cab_1920.jpg);
     
+}
+
+.section3-gallery>.gallery-title>a:hover{
+    background-color: #EB5D99;
+    transition: all 0.2s;
 }
 
 /* section4 행사뉴스*/
@@ -223,6 +254,10 @@ section{
     padding: 15px 0;
     border-bottom: #2D3192cc 2px solid;
     border-top: #2D3192cc 2px solid;
+}
+
+.section4-news>table tr:hover td{
+    color: #EB5D99;
 }
 
 /* footer */
@@ -269,4 +304,9 @@ section{
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+.top-button:hover{
+    background-color: #EB5D99;
+    transition: all 0.3s;
 }
