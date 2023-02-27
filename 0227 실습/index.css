@@ -109,9 +109,10 @@ section{
 /* section2 행사 설명 */
 .section2-intro{
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
     /*글자 간의 간격 비율 조정*/
-    line-height: 160%;
+    line-height: 120%;
+    height: 400px;
 }
 
 /* 다른 섹션과의 거리 두기*/
@@ -149,6 +150,13 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.section3-wrap>.section3-gallery>.gallery-title>a{
+    background-color: #2D3192;
+    color: white;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 8px;
 }
 
 .section3-gallery>.gallery-board{
@@ -194,12 +202,15 @@ section{
 /* section4 행사뉴스*/
 
 .section4-news{
-    padding: 20px 0;
+    padding: 60px 0;
+    height: 350px;
 }
 
 .section4-news>table{
+
     width: 80%;
     margin: auto;
+    margin-top: 30px;
 }
 
 .section4-news>table tr td:first-child{
@@ -212,4 +223,50 @@ section{
     padding: 15px 0;
     border-bottom: #2D3192cc 2px solid;
     border-top: #2D3192cc 2px solid;
+}
+
+/* footer */
+
+.footer{
+    background-color: lightgray;
+    padding: 30px 0;
+}
+.footer>.footer-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer>.footer-content>.footer-info>p{
+    float:left;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    color: gray;
+    font-size: 0.8rem;
+}
+
+/*만든 회사명은 아래로*/
+.footer>.footer-content>.footer-info>p:last-child{
+    padding: 0;
+    clear: both;
+}
+
+/*Top button*/
+
+.top-button{
+    position: fixed;
+    bottom: 10px; right: 10px;
+    width: 80px;
+    height: 80px;
+    background-color: #2D3192;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.top-button>a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
