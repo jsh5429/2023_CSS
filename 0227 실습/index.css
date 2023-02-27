@@ -1,0 +1,215 @@
+/* 사용할 폰트 */
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HS-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/HS-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TAEBAEKmilkyway';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/TAEBAEKmilkyway.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*태그 이름을 통한 css 디자인. 주로 제일 위에 작성해둔다.*/
+h1{
+    font-size: 2rem;
+    font-family: 'HS-Regular';
+}
+
+/* 섹션 크기를 고정시킬 것.*/
+section{
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: auto;
+}
+/* 클래스 이름을 통한 css디자인 */
+/* header의 nav */
+.header{
+    background-color: #2D3192cc;
+    width: 100%;
+    position: fixed;
+    color: white;
+}
+
+.header>.nav {
+    background-color: #2D3192cc;
+    max-width: 1000px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    /*위아래 정중앙에 배치*/
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header>.nav>.nav-menu{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.header>.nav>.nav-menu a{
+    color: white;
+    text-decoration: none;
+    font-family: 'HS-Regular';
+}
+
+.header>.nav>.nav-title{
+    /*크기로 강제 줄바꿈을 시켜버린다.*/
+    width: 170px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'PyeongChangPeace-Bold';
+}
+
+/* main */
+/* 섹션부분을 찾기 힘들 것 같다면
+메인 클래스에 두어도 상관 없다.*/
+
+
+/* section 단위로 접근 */
+.section1-wrap{
+    width: 100%;
+    min-height: 400px;
+    height: 100vh;
+    background-image: 
+    url(../img/rose-g8968e0cab_1920.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.section1-wrap>.section1-title{
+    padding-top: 300px;
+    color: white;
+    text-align: right;
+    padding: 300px 20px 20px 20px;
+}
+
+.section1-wrap>.section1-title>h1{
+    font-size: 3rem;
+}
+
+.section1-wrap>.section1-title>h3{
+    font-family: 'HS-Regular';
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* section2 행사 설명 */
+.section2-intro{
+    text-align: center;
+    padding: 40px 0;
+    /*글자 간의 간격 비율 조정*/
+    line-height: 160%;
+}
+
+/* 다른 섹션과의 거리 두기*/
+.section2-intro>.intro-title{
+    margin-bottom: 20px;
+}
+/* h1태그와 줄글 태그 거리 두기*/
+.section2-intro>.intro-title>h1{
+    margin-bottom: 20px;
+}
+
+.section2-intro>.intro-title>h3{
+    font-family: 'TAEBAEKmilkyway';
+}
+/*테이블 중앙정렬*/
+.section2-intro>.intro-descript>table{
+    margin: auto;
+}
+
+.section2-intro>.intro-descript table tr td:first-child{
+    color: #2D3192cc;
+    padding: 5px 10px;
+    border-right: #2D3192cc 2px solid;
+    font-weight: bold;
+}
+
+.section2-intro>.intro-descript table tr td{
+    padding: 5px 10px;
+}
+
+/* section3 행사이미지 */
+
+.section3-wrap{ }
+.section3-wrap>.section3-gallery>.gallery-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section3-gallery>.gallery-board{
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    background-color:lightblue;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.section3-gallery>.gallery-board>h4{
+    font-weight: bold;
+}
+/* section3 이미지 넣는 공간 */
+.section3-gallery>.gallery-board:nth-child(2)>.image{
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    /*나중에 수정하기 위함*/
+    background-image: url(../img/rose-g8968e0cab_1920.jpg);
+    
+}
+
+.section3-gallery>.gallery-board:nth-child(3)>.image{
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    /*나중에 수정하기 위함*/
+    background-image: url(../img/rose-g8968e0cab_1920.jpg);
+    
+}
+
+.section3-gallery>.gallery-board:nth-child(4)>.image{
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    /*나중에 수정하기 위함*/
+    background-image: url(../img/rose-g8968e0cab_1920.jpg);
+    
+}
+
+/* section4 행사뉴스*/
+
+.section4-news{
+    padding: 20px 0;
+}
+
+.section4-news>table{
+    width: 80%;
+    margin: auto;
+}
+
+.section4-news>table tr td:first-child{
+    color: #2D3192cc;
+    font-weight: bolder;
+    padding-right: 50px;
+}
+
+.section4-news>table tr td{
+    padding: 15px 0;
+    border-bottom: #2D3192cc 2px solid;
+    border-top: #2D3192cc 2px solid;
+}
